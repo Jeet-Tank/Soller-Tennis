@@ -1,0 +1,979 @@
+@font-face {
+    font-family: font1;
+    src: url(./assets/0593710ebca36a17-s.p.otf);
+}
+@font-face {
+    font-family: font1 light;
+    src: url(./assets/3b274e101b7837a5-s.p.otf);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(./assets/7c66d90a141eb89d-s.p.otf);
+}
+@font-face {
+    font-family: font2 italic;
+    src: url(./assets/92d0f3589747e982-s.p.otf);
+}
+@font-face {
+    font-family: font3;
+    src: url(./assets/c9a5bc6a7c948fb0-s.p.woff2);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(255, 252, 248);
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    position: relative;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#page1 video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#overlay1{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(68, 105, 89, 0.29);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#overlay1 img{
+    height: 22vw;
+}
+#overlay1 i{
+    position: absolute;
+    font-size: 3vw;
+    z-index: 4;
+    font-weight: 200;
+    color: white;
+    bottom: 5%;
+}
+
+#page2{
+    height: 105vh;
+    width: 100%;
+    background-color: rgb(255, 252, 248);
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.7vw;
+    padding: 8vw 0 6vw 0;
+}
+#page2 img{
+    height: 13vw;
+}
+#page2text{
+    width: 65%;
+    height: 40%;
+    text-align: center;
+    font-family: font2; 
+}
+#page2text h1{
+    font-size: 6.9vw;
+    line-height: 7vw;
+    color: rgb(68, 105, 89);
+    font-weight: 300;
+}
+#page2text h5{
+    margin-top: 3.3vw;
+    font-size: 3.2vw;
+    color: rgb(199, 102, 71);
+    font-weight: 300;
+}
+
+#page3{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 9vw;
+    justify-content: space-between;
+}
+#page3img{
+    height: 34vw;
+    width: 39vw;
+    border-radius: 1.5vw;
+    overflow: hidden;
+}
+#page3img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#page3text{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page3text h4{
+    font-size: 1.37vw;
+    line-height: 2vw;
+    font-family: font3;
+    font-weight: 300;
+}
+#scrolling{
+    margin-top: 1.6vw;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#scroll{
+    height: 90%;
+    width: 100%;
+    gap: 2.3vw;
+    display: inline-flex;
+    /* animation-name: scroll; */
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;    
+}
+
+#scroll img{
+    height: 100%;
+    border-radius: 1.6vw;    
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#page4{
+    height: 270vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 6vw;
+}
+#page4top{
+    width: 100%;
+    height: 20%;
+    font-family: font2;
+    padding: 0px 0 0 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7vw;
+}
+#page4top h1{
+    font-weight: 300;
+    font-size: 7vw;
+    line-height:7.2vw;
+    color: rgb(68, 105, 89);
+}
+#page4top h1:nth-child(2){
+    padding: 0 0 0 9%;
+    color: rgb(199, 102, 71);
+}
+#page4top h1:nth-child(3){
+    padding: 0 0 0 18%;
+    color: rgb(124, 98, 82);
+}
+
+#page4mid{
+    margin-top: 4vw;
+    height: 10%;
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+#page4mid p{
+    width: 49%;
+    height: 100%;
+    line-height: 2vw;
+    font-size: 1.4vw;
+    font-family: font3;
+    position: absolute;
+    left: 35%;
+}
+#page4bot{
+    margin-top: 3vw;
+    width: 100%;
+    height: 10%;
+    font-family: font2 italic;
+    font-size: 2.8vw;
+    display:flex;
+    flex-direction: column;
+}
+
+#page4bot h3{
+    padding-left: 44vw;
+    color: rgb(224 208 182);
+    font-weight: 350;
+}
+#page4bot h3:nth-child(2){
+    color: rgb(68, 105, 89);
+    opacity: 0.4;
+}
+#page4video{
+    height: 43%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+#containvideo{
+    height: 90%;
+    width: 70%;
+    overflow: hidden;
+    border-radius: 1.5vw;
+}
+#containvideo video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page4quote{
+    margin-top: 1.31vw;
+    height: 14%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#page4quote h2{
+    font-size: 3.13vw;
+    font-family: font2;
+    color: white;
+    font-weight: 300;
+}
+
+#page5{
+    height: 307vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    position: relative;
+    padding: 5vw 0 0 0 ;
+    overflow: hidden;
+}
+#page5topview{
+    height: 110vh;
+    width: 100%;
+    border-radius: 1.5vw;
+    overflow: hidden;
+}
+#imgpage5{
+    height: 100%;
+    width: 100%;
+    background: url(./assets/topview.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s ease;
+}
+
+#overlay2{
+    position: absolute;
+    height: 302vh;
+    width: 100%;
+    gap: 3.8vw;
+    padding-top: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+#topview,#swimming{
+    width: 50%;
+    height: 90vh;
+    color: white;
+}
+#topview h1,#swimming h1{
+    font-family: font2 italic;
+    font-size: 4.8vw;
+    font-weight: 300;
+}
+
+#topview p,#swimming p{
+    margin-top: 0.65vw;
+    width: 92%;
+    font-family: font3;
+    font-size: 1.4vw;
+    font-weight: 300;
+}
+
+#page6{
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(246, 241, 228);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page6 h1{
+    height: 48%;
+    width: 50%;
+    font-family: font2;
+    font-size: 6.51vw;
+    font-weight: 300;
+    line-height: 7vw;
+    letter-spacing: 1px;
+    color: rgb(68, 105, 89);
+}
+#page6 span{
+    color: rgb(199, 102, 71);
+}
+#contact{
+    height: 108vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    background: url(./assets/TennisBall.webp);
+    background-position: center;
+    background-size: cover;
+}
+#trademark{
+    font-family: font3;
+    position: absolute;
+    bottom: 3%;
+    font-size: 1.05vw;
+    font-weight: 300;
+    color: #dadada8e;
+}
+#backgroundOverlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 2vw 2vw 0px;
+    gap: 1vw;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(22, 93, 58, 0.805);
+    z-index: 1;
+}
+#contactsvg{
+    height: 66%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contactmid{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#groupApp{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#groupApp a{
+    height: 3.26vw;
+    width: 3.26vw;
+    background-color: white;
+    border-radius: 0.6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#groupApp i{
+    font-size: 2vw;
+    color: rgb(68, 105, 89);
+}
+
+#groupBrand{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+#groupBrand img{
+    width: 9.2vw;
+}
+
+#contactmid button{
+    width: 11.2vw;
+    height: 70%;
+    border-radius: 0.6vw;
+    font-family: font3;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(199, 102, 71);
+    border: none;
+}
+#contactbot{
+    height: 17%;
+    width: 100%;
+    padding: 0 0 0 1.2vw ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: font2;
+    color: white;
+}
+
+#address{
+    width: 24%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+#address h3{
+    font-size: 2.36vw;
+    font-weight: 300;
+}
+#detail{
+    width: 26%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#detail a{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    gap: 1vw;
+    font-size: 2vw;
+}
+#detail h3{
+    font-weight: 300;
+}
+
+#detail h3:nth-child(2){
+    width: 100%;
+    text-align: right;
+    font-size: 2.5vw;
+}
+#footer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    color: #dadada60;
+    position: relative;
+}
+#footerOverlay{
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.31);
+}
+#footerleft,#footerright{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+    padding: 0 4vw;
+    transition: 0.5s ease;
+}
+#footer>div:hover{
+    color: white;
+}
+#footer>div:hover div{
+    color: white;
+}
+#footerleft{
+    background-color: rgb(199, 102, 71);
+    align-items: start;
+}
+#footerleft h4 , #footerright h4{
+    font-family: font2 ;
+    font-size: 3.28vw;
+    font-weight: 500;
+}
+#footerleft span, #footerright span{
+    font-family: font2 italic;
+}
+#footerright{
+    background-color: rgb(68, 105, 89);
+    align-items: end;
+}
+#textleft,#textright{
+    height: 38%;
+    width: 90%;
+    font-family: font1;
+    text-transform: uppercase;
+    line-height:6.4vw;  
+    text-decoration: none;
+    animation-timing-function: ease;
+    color: #dadada23;
+    transition: 0.4s ease;
+}
+#textright{
+    text-align: right;
+}
+#textleft h1 , #textright h1{
+    font-weight: 500;
+    font-size: 6.2vw;
+}
+
+/*Breakpoint 1 1270px*/
+@media (max-width:1270px){
+    #overlay1 img{
+        height: 30vw;
+    }
+    #page2{
+        height: 60vw;
+    }
+    #page2 img{
+        height: 18vw;
+    }
+    #page2text h1{
+        font-size: 7.7vw;
+        line-height: 8vw;
+    }
+    #page2text h5{
+        margin-top: 3.8vw;
+        font-size: 3.3vw;
+
+    }
+    #page3{
+        height: 50vw;
+        padding: 0 6vw;
+    }
+    #page3img{
+        height: 40vw;
+        width: 44vw;
+    }
+    #page3img img{
+        height: 100%;
+        width: 100%;
+    }
+    #page3text{
+        width: 45%;
+        height: 55%;
+        display: flex;
+    }
+    #page3text h4{
+        font-size: 1.8vw;
+        line-height: 2.3vw;
+    }
+
+    #scrolling{
+        margin-top: 1.6vw;
+        height: 60vh;
+    }
+    #scroll{
+        height: 90%;
+        width: 100%;
+        gap: 2vw;   
+    }
+    #page4{
+        height: 140vw;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 6vw;
+    }
+    #page4top{
+        width: 100%;
+        height: 25vw;
+        font-family: font2;
+        padding: 0px 0 0 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.7vw;
+    }
+    #page4mid{
+        margin-top: 4vw;
+        height: 18vw;
+        display: flex;
+        justify-content: end;
+        position: relative;
+    }
+    #page4mid p{
+        width: 51%;
+        line-height: 2.1vw;
+        font-size: 1.8vw;
+
+    }
+    #page4bot{
+        margin-top: 2vw;
+        height: 10vw;
+    }
+    
+    #page4bot h3{
+        padding-left: 44vw;
+        color: rgb(224 208 182);
+        font-weight: 350;
+        font-size: 3.8vw;
+    }
+    #page4video{
+        margin-top: 3vw;
+        height: 57vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+    }
+    #containvideo{
+        height: 85%;
+        width: 75%;
+        overflow: hidden;
+        border-radius: 1.5vw;
+    }
+    #page4quote{
+        margin-top: 1.31vw;
+        height: 18vw;
+    }
+    #page4quote h2{
+        font-size: 3.73vw;
+    }
+    #page5{
+        margin-top: 3vw;
+        gap: 1.5vw;
+        padding: 2vw 0 0 0 ;
+    }
+    #overlay2{
+        height: 307vh;
+        gap: 3.8vw;
+    }    
+    #topview h1,#swimming h1{
+        font-size: 5.3vw;
+    }
+    
+    #topview p,#swimming p{
+        margin-top: 0.85vw;
+        font-size: 1.9vw;
+    }
+    #page6{
+        height: 46vw;
+    }
+    #trademark{
+        bottom: 4%;
+        font-size: 1.65vw;
+    }
+
+    #contactsvg{
+        height: 60%;
+    }
+    #contactmid{
+        height: 15%;
+    }
+    #groupApp{
+        width: 20%;
+    }
+    #groupApp a{
+        height: 5.2vw;
+        width: 5.2vw;
+        border-radius: 1vw;
+    }
+    #groupApp i{
+        font-size: 3vw;
+    }
+    
+    #groupBrand{
+        width: 36%;
+        gap: 2vw;
+        justify-content: start;
+    }
+    #groupBrand img{
+        width: 12vw;
+    }
+    
+    #contactmid button{
+        width: 15vw;
+        height: 45%;
+        border-radius: 1vw;
+        font-size: 1.6vw;
+    }
+    
+    #address{
+        width: 29%;
+    }
+    #address h3{
+        font-size: 3vw;
+    }
+    #detail{
+        width: 34%;
+        height: 100%;
+    }
+    #detail a{
+        font-size: 2.8vw;
+        flex-direction: row-reverse;
+    }
+
+    #detail h3:nth-child(2){
+        font-size: 3.2vw;
+    }
+
+    #footerleft{
+        padding-right: 0;
+    }
+    #footerright{
+        padding-left: 0;
+    }
+    #textleft,#textright{
+        height: 28vw;
+        width: 98%;
+        line-height:7.1vw;  
+    }
+    #textleft h1 , #textright h1{
+        font-size: 6.7vw;
+    }
+    #footerleft h4 , #footerright h4{
+        font-size: 4vw;
+    }
+
+}
+/*breakpoint 2 max 844px*/
+@media (max-width:844px){
+
+    #overlay1 img{
+        height: 38vw;
+    }
+    #page2{
+        height: 75vw;
+    }
+    #page2 img{
+        height: 22vw;
+    }
+    #page2text{
+        width: 80%;
+        height: 80%;
+    }
+    #page2text h1{
+        font-size: 8.7vw;
+        line-height: 8vw;
+    }
+    #page2text h5{
+        margin-top: 4.2vw;
+        font-size: 4vw;
+
+    }
+    #page3{
+        margin-top: 20vw;
+        height: 80vw;
+        flex-direction: column;
+        gap: 40px;
+    }
+    #page3img{
+        height: 50vw;
+        width: 70vw;
+        overflow: hidden;
+        position: relative;
+        
+    }
+    #page3img img{
+        height: 55vw;
+        width: 80vw;
+        position: absolute;
+    
+    }
+    #page3text{
+        width: 75%;
+        height: 55%;
+        display: flex;
+        position: relative;
+    }
+    #page3text h4{
+        font-size: 2.6vw;
+        line-height: 2.9vw;
+    }
+    
+    #scrolling{
+        margin-top: 7.6vw;
+        height: 32vh;
+    }
+    #scroll{
+        height: 90%;
+        width: 100%;
+        gap: 2vw;   
+    }
+    #page4{
+        height: 140vw;
+        margin-top: 6vw;
+    }
+    #page4top{
+        width: 100%;
+        height: 30vw;
+        padding: 0px 0 0 10%;
+        gap: 1.2vw;
+    }
+    #page4mid{
+        margin-top: 4vw;
+        height: 30vw;
+    }
+    #page4mid p{
+        width: 60%;
+        line-height: 2.8vw;
+        font-size: 2.5vw;
+    }
+    #page4bot{
+        margin-top: 6vw;
+        height: 15vw;
+    }
+    
+    #page4bot h3{
+        padding-left: 44vw;
+        font-size: 4.2vw;
+    }
+    #page4video{
+        margin-top: 3vw;
+        height: 65vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+    }
+    #containvideo{
+        height: 95%;
+        width: 80%;
+        border-radius: 3vw;
+    }
+    #page4quote{
+        margin-top: 8.31vw;
+        height: 34vw;
+    }
+    #page4quote h2{
+        font-size: 4.43vw;
+    }
+    #page5{
+        margin-top: 6vw;
+        gap: 1.5vw;
+        padding: 2vw 0 0 0 ;
+    }
+    #topview,#swimming{
+        width: 70%;
+    }
+    #overlay2{
+        height: 307vh;
+        gap: 8vw;
+    }    
+    #topview h1,#swimming h1{
+        font-size:7vw;
+    }
+    
+    #topview p,#swimming p{
+        margin-top: 2.5vw;
+        font-size: 3vw;
+    }
+    #page6{
+        position: relative;
+        height: 60vw;
+    }
+    #page6 h1{
+        height: 51%;
+        width: 60%;
+        font-size: 7.51vw;
+        line-height: 7vw;
+        letter-spacing: 1px;
+    }
+    #contact{
+        height: 100vh;
+    }
+    #trademark{
+        bottom: 4%;
+        font-size: 3.65vw;
+    }
+    #contactsvg{
+        height: 60%;
+    }
+    #contactsvg img{
+        height: 52vw;
+    }
+    #contactmid{
+        height: 18%;
+
+    }
+    #groupApp{
+        width: 30%;
+    }
+    #groupApp a{
+        height: 9.2vw;
+        width: 9.2vw;
+        border-radius: 2vw;
+    }
+    #groupApp i{
+        font-size: 6vw;
+    }
+    
+    #groupBrand{
+        width: 40%;
+        gap: 2vw;
+        justify-content: start;
+    }
+    #groupBrand img{
+        width: 17vw;
+    }
+    
+    #contactmid button{
+        width: 20vw;
+        height: 25%;
+        border-radius: 1vw;
+        font-size: 2.3vw;
+    }
+    
+    #address{
+        width: 45%;
+    }
+    #address h3{
+        font-size: 4.3vw;
+    }
+    #detail{
+        width: 53%;
+    }
+    #detail a{
+        font-size: 4vw;
+        flex-direction: row-reverse;
+    }
+
+    #detail h3:nth-child(2){
+        font-size: 5vw;
+    }
+    #footer{
+        flex-direction: column;
+    }
+    #footerleft,#footerright{
+        height: 50%;
+        width: 100%;
+    }
+    #textleft,#textright{
+        height: 34vw;
+        line-height:10.1vw;  
+    }
+    #textleft h1 , #textright h1{
+        font-size: 11vw;
+    }
+    #footerleft h4 , #footerright h4{
+        font-size: 8vw;
+    }
+
+}
+
